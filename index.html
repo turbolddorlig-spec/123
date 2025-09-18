@@ -29,8 +29,6 @@
     }
     .logo img{ width:100%; height:100%; object-fit:contain; display:block; }
     .title{font-weight:800}
-    .search{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 12px;flex:1;min-width:220px;max-width:460px}
-    .search input{all:unset;color:var(--ink);flex:1}
     .note{font-size:12px;color:var(--muted)}
     .section{margin-top:16px}
     .sec-head{display:flex;align-items:center;justify-content:space-between;margin:8px 0 10px}
@@ -95,7 +93,6 @@
             <div class="note">Хүссэн програм аа өөрөө суулгаж сурцгаая.</div>
           </div>
           </div>
-        <label class="search"><span>🔎</span><input id="q" placeholder="Хайлт: AutoCAD, Word, Photoshop…"/></label>
       </div>
     </header>
 
@@ -231,14 +228,7 @@
       if(!url) return `<span>${emoji}</span>`;
       return `<img src="${url}" alt="logo" onerror="this.style.display='none'; this.parentElement.textContent='${emoji}'" />`;
     }
-
-    const groupsEl=document.getElementById('groups');
-    const detailEl=document.getElementById('detail');
-    const backBtn=document.getElementById('backBtn');
-    const q=document.getElementById('q');
-    const dlg=document.getElementById('dlg');
-    const player=document.getElementById('player');
-
+    
     function isSmall(){ return window.innerWidth < 720 }
 
     function renderGroups(list){
@@ -293,11 +283,6 @@
     // backBtn дээр дарвал — нэг л функц дуудах
     backBtn?.addEventListener('click',(e)=>{ e.preventDefault(); goBack(); });
 
-    q.addEventListener('input',()=>{
-      const t=q.value.trim().toLowerCase();
-      const filtered = t? catalog.filter(g=> g.title.toLowerCase().includes(t) || g.items.some(it=> it.name.toLowerCase().includes(t))) : catalog;
-      renderGroups(filtered);
-    });
 
     renderGroups(catalog);
 
@@ -332,6 +317,7 @@
   </script>
 </body>
 </html>
+
 
 
 
