@@ -237,7 +237,7 @@
       list.forEach((g,idx)=>{
         const el=document.createElement('button');
         el.className='card'; el.style.cursor='pointer'; el.style.textAlign='left';
-        el.innerHTML=`<div class=\"ic\">${iconMarkup(g)}</div><div><h3>${g.title}</h3><p>${(g.items||[]).length} зүйл</p></div>`;
+        el.innerHTML=`<div class=\"ic\">${iconMarkup(g)}</div><div><h3>${g.title}</h3><p>${(g.items||[]).length} үз 1 сур №1 бол</p></div>`;
         el.onclick=()=>renderDetail(idx);
         groupsEl.appendChild(el);
       });
@@ -323,5 +323,6 @@
   </script>
 </body>
 </html>
+
 
 
