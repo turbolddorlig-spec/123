@@ -22,10 +22,12 @@
     .brand{display:flex;gap:10px;align-items:center}
     /* LOGO (зөв хувилбар) */
     .logo{
-     width:42px;height:42px;border-radius:12px;
-     background:#fff; overflow:hidden;
-     display:grid; place-items:center;
-     box-shadow:0 8px 24px rgba(16,185,129,.22); }
+      width:42px;height:42px;border-radius:12px;
+      background:#fff; overflow:hidden;
+      display:grid; place-items:center;
+      box-shadow:0 8px 24px rgba(16,185,129,.22);
+    }
+    .logo img{ width:100%; height:100%; object-fit:contain; display:block; }
     .title{font-weight:800}
     .search{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 12px;flex:1;min-width:220px;max-width:460px}
     .search input{all:unset;color:var(--ink);flex:1}
@@ -327,6 +329,7 @@
   </script>
 </body>
 </html>
+
 
 
 
